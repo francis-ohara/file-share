@@ -13,9 +13,7 @@ CREATE TABLE employee(
                          employee_phone_number VARCHAR(15),
                          employee_store ENUM ('A', 'B', 'C', 'D', 'E', 'F'),
                          employee_position TEXT,
-                         employee_date_employed DATE,
-                         INDEX (employee_username),
-                         INDEX (employee_store)
+                         employee_date_employed DATE
 );
 
 CREATE TABLE manager(
@@ -40,7 +38,5 @@ CREATE TABLE memo(
                      memo_filepath TEXT,
                      memo_date_uploaded DATE,
                      memo_uploader VARCHAR(256),
-                     memo_store_of_uploader ENUM ('A', 'B', 'C', 'D', 'E', 'F'),
-                     FOREIGN KEY (memo_uploader) REFERENCES employee(employee_username),
-                     FOREIGN KEY (memo_store_of_uploader) REFERENCES employee(employee_store)
+                     memo_store_of_uploader ENUM ('A', 'B', 'C', 'D', 'E', 'F')
 );
