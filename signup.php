@@ -12,8 +12,8 @@
 if (isset($_POST["create"])) {
     $is_created = create_account();
     if ($is_created)
-        echo "<h4>Account Created Successfully! Click <a href='login.php'>here</a> to go to Log in!</h4>";
-    else echo "<h4>Account Creation Failed! Try Again!></h4>";
+        echo "<h4 style='color:green'>Account Created Successfully! Click <a href='login.php'>here</a> to go to Log in Page!</h4>";
+    else echo "<h4 style='color: darkred'>Account Creation Failed! Try Again!></h4>";
 } ?>
 
 <form action="" method="post" class="form">
@@ -87,23 +87,32 @@ if (isset($_POST["create"])) {
 function create_account()
 {
     $conn = new mysqli("localhost", "root", "password", "creative_learning");
-    $Username = $_POST["username"];
-    $Email = $_POST["email"];
-    $Password = $_POST["password"];
-    $FirstName = $_POST["first-name"];
-    $LastName = $_POST["last-name"];
-    $DateOfBirth = $_POST["date-of-birth"];
-    $PermanentAddress = $_POST["permanent-address"];
-    $PhoneNumber = $_POST["phone-number"];
-    $DateEmployed = $_POST["date-employed"];
-    $Position = $_POST["position"];
-    $Store = $_POST["store"];
-    $table = $_POST["account-type"] == "employee" ? "Employees" : "Managers";
-    $column11 = $_POST["account-type"] == "employee" ? "JobTitle" : "Position";
-    $column9 = $_POST["account-type"] == "employee" ? "StoreOfEmployment" : "StoreOfManagement";
+    $username = $_POST["username"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    $firstname = $_POST["first-name"];
+    $lastname = $_POST["last-name"];
+    $date_of_birth = $_POST["date-of-birth"];
+    $permanent_address = $_POST["permanent-address"];
+    $phone_number = $_POST["phone-number"];
+    $date_employed = $_POST["date-employed"];
+    $position = $_POST["position"];
+    $store = $_POST["store"][-1];
+    $table = $_POST["account-type"] == "employee" ? "employee" : "manager";
+    $col1 = $table . "_username";
+    $col2 = $table . "_email";
+    $col3 = $table . "_password";
+    $col4 = $table . "_firstname";
+    $col5 = $table . "_lastname";
+    $col6 = $table . "_date_of_birth";
+    $col7 = $table . "_permanent_address";
+    $col8 = $table . "_phone_number";
+    $col9 = $table . "_date_employed";
+    $col10 = $table . "_position";
+    $col11 = $table . "_store";
 
-    $query = "INSERT INTO " . $table . "(Username, Email, Password,FirstName,LastName,DateOfBirth,PermanentAddress,PhoneNumber,DateEmployed," . $column11 . ", " . $column9 . ")
-                VALUES ('" . $Username . "', '" . $Email . "', '" . $Password . "', '" . $FirstName . "','" . $LastName . "', '" . $DateOfBirth . "', '" . $PermanentAddress . "', '" . $PhoneNumber . "', '" . $DateEmployed . "', '" . $Position . "', '" . $Store . "' ); 
+    $query = "INSERT INTO " . $table . "($col1, $col2, $col3, $col4, $col5, $col6, $col7, $col8, $col9, $col10, $col11)
+                VALUES ('$username', '$email', '$password', '$firstname','$lastname', '$date_of_birth', '$permanent_address', '$phone_number', '$date_employed', '$position', '$store' ); 
    ";
     return $conn->query($query);
 }
