@@ -38,5 +38,6 @@ CREATE TABLE memo(
                      memo_filepath TEXT,
                      memo_date_uploaded DATE,
                      memo_uploader VARCHAR(256),
-                     memo_store_of_uploader ENUM ('A', 'B', 'C', 'D', 'E', 'F')
+                     memo_store_of_uploader ENUM ('A', 'B', 'C', 'D', 'E', 'F'),
+                     memo_downloaded_by_manager BOOL
 );
