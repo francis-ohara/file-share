@@ -46,10 +46,10 @@ function uploader()
 function update_database(){
     $conn = new mysqli("localhost", "root", "password", "creative_learning");
     $username = $_GET["username"];
-    $stmt = "SELECT employee_id,employee_store from employee WHERE employee_username = '$username';";
+    $stmt = "SELECT employee_username,employee_store FROM employee WHERE employee_username = '$username';";
     $result = $conn->query($stmt);
     $result = $result->fetch_assoc();
-    $uploader = $result["employee_id"];
+    $uploader = $result["employee_username"];
     $store_of_uploader = $result["employee_store"];
     $filename = $_FILES["memo"]["name"];
     $filesize = $_FILES["memo"]["size"];
