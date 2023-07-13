@@ -29,8 +29,6 @@
         <button class="btn btn-primary" type="submit" name="login">Log In</button>
         <button class="btn btn-primary" type="submit" name="signup" formaction="signup.php">Sign Up</button>
         <br><br>
-
-        <?php if (isset($_POST["login"])) authorize($_POST["username"], $_POST["password"]); ?>
         <br>
     </fieldset>
     <div style="text-align: right">No account? <a href="signup.php">Sign up</a></div>
@@ -48,18 +46,19 @@ function authorize($username, $password)
     $conn = new mysqli("localhost", "root", "password", "creative_learning");
 
     $main_page = $_POST['account-type'] == "employee" ? "main-employee.php" : "main-manager.php";
-    $table = $_POST['account-type'] == "employee" ? "Employees" : "Managers";
+    $table = $_POST['account-type'] == "employee" ? "employee" : "manager";
 
-    $query = "SELECT * FROM " . $table . " WHERE Username='" . $username . "';";
+    $query = "SELECT * FROM $table WHERE" . " $table" . "_username='$username';";
     $result = $conn->query($query);
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        if ($row["Username"] === $username && $row["Password"] === $password) {
+        if ($row[$table . "_username"] === $username && $row[$table . "_password"] === $password) {
             echo "<strong>Welcome!</strong>";
             $conn->close();
             Header("Location: " . $main_page . "?username=" . $username);
         } else echo "<strong>Invalid Username and/or Password!</strong>";
-    } else echo "<strong>Invalid Username and/or Password!</strong>";
+    } else echo "<strong>Invalid Username!</strong>";
 }
 
+if (isset($_POST["login"])) authorize($_POST["username"], $_POST["password"]);
 ?>
