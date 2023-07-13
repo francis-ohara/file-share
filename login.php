@@ -58,8 +58,8 @@ function authorize($username, $password)
             echo "<strong>Welcome!</strong>";
             $conn->close();
             Header("Location: " . $main_page . "?username=" . $username);
-        } else echo "<strong>Invalid Username and/or Password!</strong>";
-    } else echo "<strong>Invalid Username!</strong>";
+        } else echo "<strong style='color:darkred>Invalid Username and/or Password!</strong>";
+    } else echo "<strong style='color:darkred'>Invalid Username!</strong>";
 }
 
 
