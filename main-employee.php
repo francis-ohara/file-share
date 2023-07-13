@@ -46,18 +46,18 @@ function uploader()
 function update_database(){
     $conn = new mysqli("localhost", "root", "password", "creative_learning");
     $username = $_GET["username"];
-    $query = "SELECT Id,StoreOfEmployment from Employees WHERE Username = '$username'";
-    $result = $conn->query($query);
+    $stmt = "SELECT employee_id,employee_store from employee WHERE employee_username = '$username';";
+    $result = $conn->query($stmt);
     $result = $result->fetch_assoc();
-    $uploader = $result["Id"];
-    $store_of_uploader = $result["StoreOfEmployment"];
+    $uploader = $result["employee_id"];
+    $store_of_uploader = $result["employee_store"];
     $filename = $_FILES["memo"]["name"];
     $filesize = $_FILES["memo"]["size"];
     $path_to_file = "./memos/$filename";
     $date_uploaded = filemtime($path_to_file);
-    $query2 = "INSERT INTO Memos(FileName, FileSize, DateUploaded, Uploader, StoreOfUploader, PathToFile)
+    $stmt2 = "INSERT INTO memo(memo_filename, memo_filesize, memo_date_uploaded, memo_uploader, memo_store_of_uploader, memo_filepath)
                 VALUES ('$filename', '$filesize', FROM_UNIXTIME('$date_uploaded'), '$uploader','$store_of_uploader' ,'$path_to_file')";
-    $conn->query($query2);
+    $conn->query($stmt2);
     $conn->close();
 }
 
