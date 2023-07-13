@@ -29,6 +29,8 @@
         <button class="btn btn-primary" type="submit" name="login">Log In</button>
         <button class="btn btn-primary" type="submit" name="signup" formaction="signup.php">Sign Up</button>
         <br><br>
+        <?php if (isset($_POST["login"])) authorize($_POST["username"], $_POST["password"]);?>
+
         <br>
     </fieldset>
     <div style="text-align: right">No account? <a href="signup.php">Sign up</a></div>
@@ -60,5 +62,5 @@ function authorize($username, $password)
     } else echo "<strong>Invalid Username!</strong>";
 }
 
-if (isset($_POST["login"])) authorize($_POST["username"], $_POST["password"]);
+
 ?>
