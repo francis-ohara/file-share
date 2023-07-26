@@ -1,8 +1,8 @@
 Date: 12th December 2022
-To: Creative Learning Boss
-Title: Lyrics
+To: Creative Learning Store A Manager
+Title: Order #3347
 
-Body:
-Oh ma douce souffrance!
-Je danse avec le vent la pluie
-Un peu d'amour, un brun du miel et je m'envole  vole vole vole vole vole vole
+Items:
+1. Animorphs Series by K.A. Applegate
+2. Harry Potter and the Philosopher's Stone by J. K. Rowling
+3. Dune: Herbert, Frank
