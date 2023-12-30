@@ -1,5 +1,5 @@
-CREATE DATABASE creative_learning;
-USE creative_learning;
+CREATE DATABASE file_share;
+USE file_share;
 
 CREATE TABLE employee(
                          employee_id INTEGER PRIMARY KEY AUTO_INCREMENT,
