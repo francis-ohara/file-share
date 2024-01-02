@@ -6,11 +6,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="icon" href="https://github.com/francisohara24/PHP-File-Share/blob/master/content/logo-small.jpeg?raw=true">
     </head>
 <body class="container">
 <h1>Welcome to the Main Employee Page!</h1>
 <div class="header">
-    <a href="login.php">Log Out</a>
+    <a href="index.php">Log Out</a>
 </div>
 <?php if (isset($_POST["upload"])) {
     uploader();
@@ -44,7 +45,7 @@ function uploader()
 }
 
 function update_database(){
-    $conn = new mysqli("localhost", "root", "password", "creative_learning");
+    $conn = new mysqli("localhost", "root", "password", "file_share");
     $username = $_GET["username"];
     $stmt = "SELECT employee_username,employee_store FROM employee WHERE employee_username = '$username';";
     $result = $conn->query($stmt);
