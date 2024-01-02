@@ -44,7 +44,7 @@
     <div>
     <button class="btn btn-primary" type="submit" name="login">Log In</button>
     <button class="btn btn-primary" type="submit" name="signup" formaction="signup.php">Sign Up</button>
-        <div style="text-align: right">No account? <a href="signup.php">Sign up</a></div>
+        <div class="text-center">No account? <a href="signup.php">Sign up</a></div>
     </div>
 
     <?php if (isset($_POST["login"])) authorize($_POST["username"], $_POST["password"]); ?>
