@@ -19,15 +19,16 @@ if (isset($_POST["create-account"])) {
     else echo "<h4 style='color: darkred'>Account Creation Failed! Try Again!></h4>";
 } ?>
 
-<form action="" method="post" class="form">
-
-    <h4>Create an Account</h4>
+<form class="form" action="" method="post">
+    <div>
+        <h4>Create an Account</h4>
+    </div>
 
     <div class="mb-3">
         <label class="form-label fw-semibold" for="username">Username</label>
         <input type="text" class="form-control" id="username" name="username"
                value="<?php echo count($_POST) > 0 ? $_POST["username"] : "" ?>"
-               placeholder="Enter Username" required pattern="[A-Za-z0-9_]{2,}" aria-describedby="username-form-text">
+               placeholder="Enter Username" required pattern="[A-Za-z0-9_]{3,}" aria-describedby="username-form-text">
         <div id="username-form-text" class="form-text">Your username must be more than 2 characters long and may only
             contain letters, numbers, and underscores.
         </div>
@@ -62,6 +63,14 @@ if (isset($_POST["create-account"])) {
         <label for="date-of-birth" class="form-label fw-semibold">Date of Birth</label>
         <input type="date" class="form-control" id="date-of-birth" name="date-of-birth" required>
     </div>
+    <script>
+        let today = new Date();
+        let year = today.getFullYear().toString().padStart(4, "0");
+        let month = (today.getMonth() + 1).toString().padStart(2, "0");
+        let day = today.getDate().toString().padStart(2, "0");
+        let date = year + "-" + month + "-" + day;
+        document.getElementById("date-of-birth").setAttribute("max", date);
+    </script>
 
     <div class="mb-5 mt-5">
 
@@ -78,7 +87,7 @@ if (isset($_POST["create-account"])) {
 
         <div class="mb-3">
             <label for="state" class="form-label fw-semibold">State</label>
-            <select class="form-select" aria-label="Default select example" id="state" name="state">
+            <select class="form-select" aria-label="Default select example" id="state" name="state" required>
                 <option selected>Select a State</option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
@@ -135,15 +144,20 @@ if (isset($_POST["create-account"])) {
         </div>
         <div class="mb-3">
             <label for="zip-code" class="form-label fw-semibold">Zip Code</label>
-            <input type="text" class="form-control" id="zip-code" name="zip-code" placeholder="00000" pattern="[0-9]{5}" required>
+            <input type="text" class="form-control" id="zip-code" name="zip-code" placeholder="00000" pattern="[0-9]{5}"
+                   required aria-describedby="zip-code-form-text">
+            <div id="zip-code-form-text" class="form-text">Enter your 5-digit zip code</div>
         </div>
     </div>
 
 
     <div class="mb-3">
         <label for="phone-number" class="form-label fw-semibold">Phone Number</label>
-        <input type="tel" class="form-control" id="phone-number" name="phone-number" required pattern="[0-9]{9,12}">
-        <div class="form-text">Begin with 3-digit country code without + sign, and don't include leading 0.</div>
+        <input type="tel" class="form-control" id="phone-number" name="phone-number" required pattern="[0-9]{9,12}"
+               aria-describedby="phone-number-form-text">
+        <div id="phone-number-form-text" class="form-text">Begin with 3-digit country code without + sign, and don't
+            include leading 0.
+        </div>
     </div>
 
     <div class="mb-2 fw-semibold"> Account Type</div>
@@ -158,14 +172,19 @@ if (isset($_POST["create-account"])) {
 
     <div class="mb-3">
         <label for="job-title" class="form-label fw-semibold">Job Title</label>
-        <input type="text" class="form-control" id="job-title" name="job-title" required>
-        <div class="form-text">Enter your role within the organization.</div>
+        <input type="text" class="form-control" id="job-title" name="job-title" required
+               aria-describedby="job-title-form-text">
+        <div id="job-title-form-text" class="form-text">Enter your role within the organization.</div>
     </div>
 
     <div class="mb-3">
         <label for="date-employed" class="form-label fw-semibold">Date Employed</label>
         <input type="date" class="form-control" id="date-employed" name="date-employed" required>
+        <script>
+            document.getElementById("date-employed").setAttribute("max", date);
+        </script>
     </div>
+
     <div class="mb-3 mt-4">
         <div class="form-check">
             <label for="agreement-1" class="form-check-label"> I verify that all information entered above is true and
@@ -180,10 +199,10 @@ if (isset($_POST["create-account"])) {
 
     <button type="submit" class="btn btn-primary" name="create-account">Create Account</button>
 
-    </form>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-            crossorigin="anonymous"></script>
+</form>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
 </body>
 </html>
 
