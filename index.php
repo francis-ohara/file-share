@@ -13,15 +13,18 @@
 <h2 style="text-align: center; font-style: italic">PHP FileShare</h2>
 
 
-<form action="" method="post">
-    <h4>Login</h4>
+<form class="form" action="" method="post">
+    <div>
+        <h4>Login</h4>
+    </div>
+
     <div class="mb-3 form-floating">
         <input type="text" class="form-control" id="username" name="username"
                value="<?php echo count($_POST) > 0 ? $_POST["username"] : "" ?>"
                placeholder="Enter your username" required>
         <label for="username" class="form-label">Username </label>
-
     </div>
+
     <div class="mb-3 form-floating">
         <input type="password" class="form-control" id="password" name="password"
                value="<?php echo count($_POST) > 0 ? $_POST["password"] : "" ?>"
@@ -29,27 +32,23 @@
         <label for="password" class="form-label">Password </label>
     </div>
 
-    <div class="form-check form-check-inline">
+    <div class="mb-3 form-check form-check-inline">
         <label for="employee" class="form-check-label"> Employee </label>
         <input type="radio" class="form-check-input" id="employee" checked name="account-type" value="employee"
                required>
     </div>
 
-    <div class="form-check form-check-inline">
+    <div class="mb-3 form-check form-check-inline">
         <label for="manager" class="form-check-label"> Manager</label>
         <input type="radio" class="form-check-input" id="manager" name="account-type" value="manager">
     </div>
-    <br>
-    <br>
-    <div>
-    <button class="btn btn-primary" type="submit" name="login">Log In</button>
-    <button class="btn btn-primary" type="submit" name="signup" formaction="signup.php">Sign Up</button>
+    <div class="mt-2">
+        <button class="btn btn-primary" type="submit" name="login">Log In</button>
+        <button class="btn btn-primary" type="submit" name="signup" formaction="signup.php">Sign Up</button>
         <div class="text-center">No account? <a href="signup.php">Sign up</a></div>
     </div>
 
     <?php if (isset($_POST["login"])) authorize($_POST["username"], $_POST["password"]); ?>
-
-    <br>
 
 </form>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
