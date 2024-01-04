@@ -1,5 +1,5 @@
 # PHP-File-Share
-<div style="text-align:center"> <img src="https://github.com/francisohara24/PHP-File-Share/blob/feature/1-complete-login-and-sign-up-page/content/images/logo-medium.jpeg?raw=true" alt="2D logo of PHP file share web application"> </div> 
+<p style="text-align:center"> <img src="https://github.com/francisohara24/PHP-File-Share/blob/feature/1-complete-login-and-sign-up-page/content/images/logo-medium.jpeg?raw=true" alt="2D logo of PHP file share web application"> </p> 
 
 A Full-stack web application for sharing files between employees and managers at an organization.
  - Employee users can upload files.
