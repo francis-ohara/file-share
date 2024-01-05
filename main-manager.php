@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="icon" href="content/images/logo.png">
 </head>
 <body class="container">
 <h1>Welcome to the Main Manager Page!</h1>
 
 <div class="header">
-    <a href="login.php">Log Out</a>
+    <a href="index.php">Log Out</a>
 </div>
 
 <h3>Available Memos</h3>
@@ -31,7 +32,7 @@
     <tbody>
     <?php
     update_database();
-    fetch_memos();
+    fetch_files();
     ?>
     </tbody>
 </table>
@@ -45,11 +46,11 @@
 </html>
 
 <?php
-function fetch_memos()
+function fetch_files()
 {
     //foreach record in the memos table ordered by date modified,
     //generate th, td.
-    $conn = new mysqli("localhost", "root", "password", "creative_learning");
+    $conn = new mysqli("localhost", "root", "password", "file_share");
     $stmt = "SELECT memo_id, memo_filename, memo_uploader, memo_store_of_uploader, memo_date_uploaded , memo_filepath, memo_downloaded_by_manager FROM memo
                     ORDER BY memo_date_uploaded DESC";
     $result = $conn->query($stmt);
@@ -92,7 +93,7 @@ function fetch_memos()
    function update_database() {
     if (isset($_POST['download'])) {
         $memo_no = $_POST['download'];
-        $conn = new mysqli('localhost', 'root', 'password', 'creative_learning');
+        $conn = new mysqli('localhost', 'root', 'password', 'file_share');
         $stmt1 = "UPDATE memo SET memo_downloaded_by_manager = TRUE WHERE memo_id = $memo_no";
         $conn->query($stmt1);
 

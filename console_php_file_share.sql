@@ -31,13 +31,13 @@ CREATE TABLE manager(
                         manager_date_employed DATE
 );
 
-CREATE TABLE memo(
-                     memo_id INTEGER PRIMARY KEY AUTO_INCREMENT,
-                     memo_filename TEXT,
-                     memo_filesize DOUBLE,
-                     memo_filepath TEXT,
-                     memo_date_uploaded DATE,
-                     memo_uploader VARCHAR(256),
-                     memo_store_of_uploader ENUM ('A', 'B', 'C', 'D', 'E', 'F'),
-                     memo_downloaded_by_manager BOOL
+CREATE TABLE file(
+                     file_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+                     file_filename TEXT,
+                     file_filesize DOUBLE,
+                     file_filepath TEXT,
+                     file_date_uploaded DATE,
+                     file_uploader VARCHAR(256),
+                     file_store_of_uploader ENUM ('A', 'B', 'C', 'D', 'E', 'F'),
+                     file_downloaded_by_manager BOOL
 );
