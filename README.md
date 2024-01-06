@@ -1,12 +1,12 @@
-# PHP-File-Share
-![PHP File Share Logo](old/content/images/logo-medium.png)  
-A Full-stack web application for sharing files between employees and managers at an organization.
+# File-Share
+![PHP File Share Logo](assets/logo-medium.png)  
+A Full-stack PHP web application for sharing files between users.
 
 ## Features
- - Employee users can upload files.
- - Manager users can view all uploaded files and download specific files.
+ - Users can upload files and share with other users on the platform securely.
+ - Users can view and download files shared with them.
  - Multi-User Authentication via email and password.
- - Secure File Storage with Google Cloud Storage Service.
+ - Secure File Storage with Google Cloud Storage.
  - ...
 
 ## Demo
