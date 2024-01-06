@@ -39,8 +39,10 @@
             <!-- Login Form    -->
             <div class="login-form d-flex justify-content-center">
                     <div class="card w-100 mx-3 p-5 rounded-5 shadow-lg" style="max-width: 400px; min-width:400px">
-                        <form action="" class="text-center">
-                            <img src="assets/logo.png" alt="File Share app logo: a white folder with the letters F and S written on it in blue." width="120px" class="mb-4">
+                        <img src="assets/logo.png" alt="File Share app logo: a white folder with the letters F and S written on it in blue."
+                             width="120px"
+                             class="mb-4 align-self-center">
+                        <form action="" method="post">
                             <div class="form-floating mb-2">
                                 <input type="email" class="form-control" id="email" name="user[email]" placeholder="Email address" required>
                                 <label class="form-label" for="email">Email address</label>
@@ -54,10 +56,10 @@
                                     Sign In
                                 </button>
                             </div>
-                            <div >
-                                Not a member?&nbsp <a href="sign-up.php"> Sign up</a>
-                            </div>
                         </form>
+                        <div class="text-center">
+                            Not a member?&nbsp <a href="sign-up.php"> Sign up</a>
+                        </div>
                     </div>
             </div>
 
