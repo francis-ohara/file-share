@@ -1,5 +1,5 @@
 # PHP-File-Share
-![PHP File Share Logo](content/images/logo-medium.png)  
+![PHP File Share Logo](old/content/images/logo-medium.png)  
 A Full-stack web application for sharing files between employees and managers at an organization.
 
 ## Features
