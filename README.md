@@ -1,6 +1,6 @@
 # File-Share
 ![PHP File Share Logo](assets/logo-medium.png)  
-A Full-stack PHP web application for sharing files between users.
+A Full-stack PHP web application for sharing files securely between users.
 
 ## Features
  - Users can upload files and share with other users on the platform securely.
