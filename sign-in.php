@@ -29,7 +29,7 @@
 
             <!-- TODO: Add php code that echoes this alert only when email or password is not found in database.  -->
             <div class="container" style="margin-bottom: -20vh; margin-top: 20vh; max-width: 500px">
-                <div class="alert alert-danger alert-dismissible text-center" role="alert">
+                <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
                     The email and/or password you entered is incorrect. Please try again.
                     <button type="button" class="btn-close" aria-label="close" data-bs-dismiss="alert"></button>
                 </div>
@@ -39,9 +39,12 @@
             <!-- Login Form    -->
             <div class="login-form d-flex justify-content-center">
                     <div class="card w-100 mx-3 p-5 rounded-5 shadow-lg" style="max-width: 400px; min-width:400px">
-                        <img src="assets/logo.png" alt="File Share app logo: a white folder with the letters F and S written on it in blue."
-                             width="120px"
-                             class="mb-4 align-self-center">
+                        <div class="text-center">
+                            <img src="assets/logo.png" alt="File Share app logo: a white folder with the letters F and S written on it in blue."
+                                 width="120px"
+                                 class="mb-4">
+                        </div>
+
                         <form action="" method="post">
                             <div class="form-floating mb-2">
                                 <input type="email" class="form-control" id="email" name="user[email]" placeholder="Email address" required>
@@ -52,7 +55,7 @@
                                 <label for="password" class="form-label">Password</label>
                             </div>
                             <div>
-                                <button class="btn btn-primary w-100 mb-4" type="submit">
+                                <button type="submit" class="btn btn-primary w-100 mb-4">
                                     Sign In
                                 </button>
                             </div>
@@ -98,5 +101,6 @@
 </html>
 
 <?php
-
+    require 'helpers.php';
+    // authenticate();
 ?>
