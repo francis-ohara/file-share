@@ -75,7 +75,7 @@
 
 
 <!-- Footer -->
-<footer class="bg-dark " style="padding-top: 1rem; padding-bottom: 1rem; margin-top: -10px;">
+<footer class="bg-dark " style="padding-top: 3rem; padding-bottom: 3rem; margin-top: -10px;">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
