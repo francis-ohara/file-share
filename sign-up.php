@@ -41,7 +41,7 @@
 
 
 
-        <div class="container d-flex flex-column align-items-center" style="padding-top: 10vh; padding-bottom: 10vh;">
+        <div class="container d-flex flex-column align-items-center" style="padding-top: 10vh; padding-bottom: 10vh; padding-left: 10px; padding-right: 10px;">
             <!-- TODO: Add php code to control which alert gets echoed.
                Success alert could be dismissible modal with go to sign up page button.
                Eg. failure message: an account with that email already exists, ensure the passwords you entered match
@@ -57,7 +57,7 @@
             </div>
 
 
-            <div class="card mx-5 w-100 rounded-4 p-5 shadow-lg" style="max-width: 600px; min-width: 600px;">
+            <div class="card w-100 rounded-4 p-5 shadow-lg" style="max-width: 600px; min-width: 400px;">
                 <img src="assets/logo.png"
                      alt="File Share app logo: a white folder with the letters F and S written on it in blue."
                      width="120px" class="mb-4 align-self-center">
