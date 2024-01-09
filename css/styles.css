@@ -12415,7 +12415,7 @@ textarea.form-control-lg {
     font-size: 4.5rem;
 }
 
-header.masthead {
+header.main-header {
     position: relative;
     background-color: #343a40;
     background: url("../assets/landing-page.jpeg") no-repeat center center;
@@ -12424,7 +12424,7 @@ header.masthead {
     padding-bottom: 8rem;
 }
 
-header.masthead:before {
+header.main-header:before {
     content: "";
     position: absolute;
     background-color: #1c375e;
@@ -12435,17 +12435,17 @@ header.masthead:before {
     opacity: 0.5;
 }
 
-header.masthead h1, header.masthead .h1 {
+header.main-header h1, header.main-header .h1 {
     font-size: 2rem;
 }
 
 @media (min-width: 768px) {
-    header.masthead {
+    header.main-header {
         padding-top: 12rem;
         padding-bottom: 12rem;
     }
 
-    header.masthead h1, header.masthead .h1 {
+    header.main-header h1, header.main-header .h1 {
         font-size: 3rem;
     }
 }
@@ -12453,14 +12453,4 @@ header.masthead h1, header.masthead .h1 {
 footer.footer {
     padding-top: 4rem;
     padding-bottom: 4rem;
-}
-
-footer.footer-narrow {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-div.login-form {
-    padding-top: 20vh;
-    padding-bottom: 20vh;
 }
