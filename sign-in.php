@@ -35,7 +35,7 @@
 <!-- Login Form    -->
 <div class="container d-flex flex-column align-items-center" style="padding-top: 20vh; padding-bottom: 20vh;">
     <!-- TODO: Add php code that echoes this alert only when email or password is not found in database.  -->
-    <div class=" alert alert-danger alert-dismissible fade show text-center" role="alert">
+    <div class="d-none alert alert-danger alert-dismissible fade show text-center" role="alert">
         The email and/or password you entered is incorrect. Please try again.
         <button type="button" class="btn-close" aria-label="close" data-bs-dismiss="alert"></button>
     </div>
