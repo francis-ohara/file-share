@@ -57,7 +57,7 @@
             </div>
 
 
-            <div class="card w-100 rounded-4 p-5 shadow-lg" style="max-width: 600px; min-width: 500px;">
+            <div class="card mx-5 w-100 rounded-4 p-5 shadow-lg" style="max-width: 600px; min-width: 600px;">
                 <img src="assets/logo.png"
                      alt="File Share app logo: a white folder with the letters F and S written on it in blue."
                      width="120px" class="mb-4 align-self-center">
