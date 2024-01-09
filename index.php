@@ -28,7 +28,7 @@
         </nav>
 
         <!-- Masthead-->
-        <header class="masthead">
+        <header class="main-header">
 
             <div class="container position-relative">
                 <div class="row justify-content-center">
@@ -42,7 +42,8 @@
                 </div>
             </div>
         </header>
-        <!-- Icons Grid-->
+
+        <!-- App Features Grid -->
         <section class="features-icons bg-light text-center">
             <div class="container">
                 <div class="row">
@@ -100,6 +101,7 @@
                 </div>
             </div>
         </footer>
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Custom JS-->
