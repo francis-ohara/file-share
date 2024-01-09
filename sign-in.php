@@ -33,14 +33,14 @@
 </nav>
 
 <!-- Login Form    -->
-<div class="container d-flex flex-column align-items-center" style="padding-top: 20vh; padding-bottom: 20vh;">
+<div class="container d-flex flex-column align-items-center" style="padding-top: 20vh; padding-bottom: 25vh;">
     <!-- TODO: Add php code that echoes this alert only when email or password is not found in database.  -->
     <div class="d-none alert alert-danger alert-dismissible fade show text-center" role="alert">
         The email and/or password you entered is incorrect. Please try again.
         <button type="button" class="btn-close" aria-label="close" data-bs-dismiss="alert"></button>
     </div>
 
-    <div class="card w-100 mx-3 p-5 rounded-5 shadow-lg" style="max-width: 400px; min-width:400px">
+    <div class="card w-100 p-5 rounded-5 shadow-lg" style="max-width: 425px; min-width:400px">
         <div class="text-center">
             <img src="assets/logo.png"
                  alt="File Share app logo: a white folder with the letters F and S written on it in blue."
@@ -49,31 +49,33 @@
         </div>
 
         <form action="" method="post">
-            <div class="form-floating mb-2">
-                <input type="email" class="form-control" id="email" name="user[email]" placeholder="Email address"
-                       required>
-                <label class="form-label" for="email">Email address</label>
-            </div>
-            <div class="form-floating mb-4">
-                <input type="password" class="form-control" id="password" name="user[password]" placeholder="Password"
-                       required>
-                <label for="password" class="form-label">Password</label>
-            </div>
-            <div>
-                <button type="submit" class="btn btn-primary w-100 mb-4">
-                    Sign In
-                </button>
-            </div>
+                <div class="form-floating mb-2">
+                    <input type="email" class="form-control" id="email" name="user[email]" placeholder="Email address"
+                           required>
+                    <label class="form-label" for="email">Email address</label>
+                </div>
+                <div class="form-floating mb-4">
+                    <input type="password" class="form-control" id="password" name="user[password]"
+                           placeholder="Password"
+                           required>
+                    <label for="password" class="form-label">Password</label>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary w-100 mb-4">
+                        Sign In
+                    </button>
+                </div>
+                <div class="text-center">
+                    Not a member?&nbsp <a href="sign-up.php"> Sign up</a>
+                </div>
         </form>
-        <div class="text-center">
-            Not a member?&nbsp <a href="sign-up.php"> Sign up</a>
-        </div>
+
     </div>
 </div>
 
 
 <!-- Footer -->
-<footer class="bg-dark fixed-bottom" style="padding-top: 3rem; padding-bottom: 3rem;">
+<footer class="bg-dark " style="padding-top: 1rem; padding-bottom: 1rem; margin-top: -10px;">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
