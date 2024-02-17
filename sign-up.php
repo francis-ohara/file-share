@@ -15,7 +15,7 @@
         <!-- Custom CSS (includes Bootstrap) -->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
-    <body style="background-image: url('assets/landing-page-2.jpeg'); background-size: cover; background-repeat: no-repeat; background-position: center">
+    <body class="h-100" style="background-image: url('assets/landing-page-2.jpeg'); background-size: cover; background-repeat: no-repeat; background-position: center">
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
@@ -41,7 +41,7 @@
 
 
 
-        <div class="container d-flex flex-column align-items-center" style="padding-top: 10vh; padding-bottom: 10vh; padding-left: 10px; padding-right: 10px;">
+        <div class="container d-flex flex-column align-items-center" style="padding-top: 10vh; padding-bottom: 10vh;">
             <!-- TODO: Add php code to control which alert gets echoed.
                Success alert could be dismissible modal with go to sign up page button.
                Eg. failure message: an account with that email already exists, ensure the passwords you entered match
@@ -69,6 +69,7 @@
                     </div>
                     <div class="row" >
                         <!--  div for both first and last name -->
+<!--                        TODO: specify col-lg, col-sm, etc to make it responsive-->
                         <div class="col">
                             <div class="form-floating">
                                 <input type="text" class="form-control" id="first-name" name="user[first-name]" placeholder="First name" aria-describedby="name-help" required>
