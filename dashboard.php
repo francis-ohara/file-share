@@ -86,7 +86,7 @@
                 <div class="row">
                     <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
 
-                        <p class="text-muted small mb-4 mb-lg-0">Copyright &copy; 2024 &nbsp Francis O'Hara. &nbsp&nbsp All
+                        <p class="text-muted small mb-4 mb-lg-0">Copyright &copy; 2025 &nbsp Francis O'Hara. &nbsp&nbsp All
                             Rights Reserved.</p>
                     </div>
                     <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
