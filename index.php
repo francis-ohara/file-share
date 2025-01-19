@@ -83,7 +83,7 @@
                             <li class="list-inline-item"><a href="sign-up.php">Sign Up</a></li>
 
                         </ul>
-                        <p class="text-muted small mb-4 mb-lg-0">Copyright &copy; 2025 &nbsp Francis O'Hara. &nbsp&nbsp All Rights Reserved.</p>
+                        <p class="text-muted small mb-4 mb-lg-0" id="footer-text">placeholder-footer-text</p>
                     </div>
                     <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
                         <ul class="list-inline mb-0">
