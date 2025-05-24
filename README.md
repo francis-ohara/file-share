@@ -1,4 +1,4 @@
-# File-Share
+# file-share
 ![PHP File Share Logo](assets/logo-medium.png)  
 A Full-stack PHP web application for sharing files securely between users.
 
