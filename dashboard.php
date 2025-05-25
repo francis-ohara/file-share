@@ -91,7 +91,7 @@
                     <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
                         <ul class="list-inline mb-0">
                             <li class="list-inline-item me-4">
-                                <a href="https://github.com/francisohara24"><i class="bi-github fs-3"></i></a>
+                                <a href="https://github.com/francis-ohara"><i class="bi-github fs-3"></i></a>
                             </li>
                             <li class="list-inline-item me-4">
                                 <a href="https://linkedin.com/in/francis-ohara"><i class="bi-linkedin fs-3"></i></a>
