@@ -15,8 +15,6 @@ A demo of the app is available at [www.fileshare.software](https://www.fileshare
  - Bootstrap
  - HTML/CSS
  - JavaScript
- - PHP
+ - Hack/PHP
  - MySQL
- - Apache HTTP Server
- - Google Cloud Compute Engine
  - Google Cloud Storage
