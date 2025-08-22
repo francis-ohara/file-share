@@ -1,3 +1,8 @@
+<?php
+require 'backend/helpers.php';
+// authenticate();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +13,7 @@
     <meta name="author" content="Francis O'Hara"/>
     <title>File Share</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.png"/>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png"/>
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"
           type="text/css"/>
@@ -16,15 +21,15 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
           type="text/css"/>
     <!-- Custom CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet"/>
+    <link href="/css/styles.css" rel="stylesheet"/>
 </head>
 
-<body style="background-image: url('assets/landing-page-2.jpeg'); background-size: cover; background-repeat: no-repeat; background-position: center">
+<body style="background-image: url('/assets/landing-page-2.jpeg'); background-size: cover; background-repeat: no-repeat; background-position: center">
 <!-- Navigation-->
 <nav class="navbar navbar-light bg-light static-top">
     <div class="container">
         <a class="navbar-brand" href="index.php">
-            <img src="assets/logo-small.png"
+            <img src="/assets/logo-small.png"
                  alt="File Share app logo: a white folder with the letters F and S written on it in blue.">
             <span class="align-middle">File Share</span>
         </a>
@@ -42,7 +47,7 @@
 
     <div class="card w-100 p-5 rounded-5 shadow-lg" style="max-width: 425px; min-width:400px">
         <div class="text-center">
-            <img src="assets/logo.png"
+            <img src="/assets/logo.png"
                  alt="File Share app logo: a white folder with the letters F and S written on it in blue."
                  width="120px"
                  class="mb-4">
@@ -101,11 +106,6 @@
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Custom JS-->
-<script src="js/scripts.js"></script>
+<script src="/js/scripts.js"></script>
 </body>
 </html>
-
-<?php
-require 'backend/helpers.php';
-// authenticate();
-?>
