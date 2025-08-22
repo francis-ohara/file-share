@@ -1,3 +1,8 @@
+<?php
+    require "backend/helpers.php";
+    // $msg = create_account();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -79,7 +84,7 @@
 
                         <div class="col ">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="last-name" name="user[first-name]" placeholder="Last name" aria-describedby="name-help" required>
+                                <input type="text" class="form-control" id="last-name" name="user[last-name]" placeholder="Last name" aria-describedby="name-help" required>
                                 <label for="last-name" class="form-label">Last Name</label>
                             </div>
                         </div>
@@ -156,8 +161,3 @@
         <script src="/js/scripts.js"></script>
     </body>
 </html>
-
-<?php
-    require "backend/helpers.php";
-    // $msg = create_account();
-?>

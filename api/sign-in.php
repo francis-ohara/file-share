@@ -1,3 +1,8 @@
+<?php
+require 'backend/helpers.php';
+// authenticate();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -104,8 +109,3 @@
 <script src="/js/scripts.js"></script>
 </body>
 </html>
-
-<?php
-require 'backend/helpers.php';
-// authenticate();
-?>
